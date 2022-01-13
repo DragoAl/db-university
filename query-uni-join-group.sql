@@ -73,7 +73,7 @@
             ON teachers.id = course_teacher.teacher_id;
 
 -- 6. Selezionare tutti i docenti che insegnano nel Dipartimento di Matematica (54)
-    SELECT departments.name, teachers.name, teachers.surname
+    SELECT  DISTINCT departments.name, teachers.name, teachers.surname
     FROM teachers
         JOIN course_teacher
             ON teachers.id = course_teacher.teacher_id
